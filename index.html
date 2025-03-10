@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        /* Simple Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: plum;
+            text-align: center;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Stylish Buttons */
+        button {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+
+        /* Table Styling */
+        table {
+            width: 85%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🎓 Student Details 📚</h2>
+    <button id="createData">➕ Add New Student</button>
+    <button id="fetchData">📂 Fetch Student Data</button>
+    <button id="clearTableBtn">🗑 Clear Data</button>
+    
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody id="students"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Redirect to the form page to add a new student
+        document.getElementById('createData').addEventListener('click', function() {
+            window.location.href = 'student-form.html';
+        });
+    </script>
+
+</body>
+</html>
